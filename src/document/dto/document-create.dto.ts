@@ -1,4 +1,4 @@
-import { IsArray, IsObject, ValidateNested } from "class-validator";
+import { ArrayMinSize, IsArray, IsNotEmpty, IsObject, ValidateNested } from "class-validator";
 import { ClientInformationDTO } from "./client-information.dto";
 import { TransactionDTO } from "./transaction.dto";
 import { Type } from 'class-transformer';
@@ -6,13 +6,12 @@ import { Type } from 'class-transformer';
 
 export class DocumentCreateDTO
 {
-    @IsObject()
-    @ValidateNested({ each: true })
+    @ValidateNested()
     @Type(() => ClientInformationDTO)
     client_information: ClientInformationDTO;
 
     @IsArray()
-    @ValidateNested()
-    @Type(() => Array<TransactionDTO> )
+    @ValidateNested({ each: true })
+    @Type(() => Array<TransactionDTO>)
     transactions:       TransactionDTO[];
 }

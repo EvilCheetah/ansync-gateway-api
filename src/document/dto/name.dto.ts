@@ -7,5 +7,5 @@ export class NameDTO
     first_name: string;
 
     @IsString()
-    last_name: string;
+    last_name:  string;
 }
