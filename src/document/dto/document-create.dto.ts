@@ -6,12 +6,14 @@ import { Type } from 'class-transformer';
 
 export class DocumentCreateDTO
 {
+    @IsObject()
     @ValidateNested()
     @Type(() => ClientInformationDTO)
     client_information: ClientInformationDTO;
 
     @IsArray()
+    @ArrayMinSize(1)
     @ValidateNested({ each: true })
-    @Type(() => Array<TransactionDTO>)
+    @Type(() => TransactionDTO)
     transactions:       TransactionDTO[];
 }
