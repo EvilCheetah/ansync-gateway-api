@@ -1,0 +1,1 @@
+export const TAX_EXEMPT = 'TAX EXEMPT';

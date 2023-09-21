@@ -16,6 +16,16 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+
+    "paths": {
+        "@/constant":    ["src/common/constant/index"],
+        "@/decorator":   ["src/common/decorator/index"],
+        
+        "@/constant/*":  ["src/common/constant/*"],
+        "@/decorator/*": ["src/common/decorator/*"],
+
+        "@/common/*": ["src/common/*"]
+    }
   }
 }
