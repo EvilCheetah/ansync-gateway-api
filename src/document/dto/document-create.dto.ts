@@ -1,5 +1,4 @@
-import { ArrayMinSize, IsArray, IsNotEmpty, IsObject, IsString, ValidateNested } from "class-validator";
-import { TemplateDTO } from "./template.dto";
+import { ArrayMinSize, IsArray, IsNotEmpty, IsObject, ValidateNested } from "class-validator";
 import { ClientInformationDTO } from "./client-information.dto";
 import { TransactionDTO } from "./transaction.dto";
 import { Type } from 'class-transformer';
@@ -7,10 +6,6 @@ import { Type } from 'class-transformer';
 
 export class DocumentCreateDTO
 {
-    @IsString()
-    @Type(() => TemplateDTO)
-    template_name:    TemplateDTO;
-
     @IsObject()
     @ValidateNested()
     @Type(() => ClientInformationDTO)
