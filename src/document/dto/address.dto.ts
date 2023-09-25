@@ -1,4 +1,5 @@
-import { IsPostalCode, IsString } from "class-validator";
+import { IsString } from "class-validator";
+// import { IsPostalCode, IsString } from "class-validator";
 
 
 export class AddressDTO
@@ -15,6 +16,6 @@ export class AddressDTO
     @IsString()
     state:          string;
 
-    @IsPostalCode()
-    postal_code:    string;
+    //@IsPostalCode()
+    //postal_code:    string;
 }
