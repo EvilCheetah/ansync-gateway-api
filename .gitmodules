@@ -1,9 +1,0 @@
-[submodule "ansync-docprocess-emailservice-submodule"]
-	path = ansync-docprocess-emailservice-submodule
-	url = https://github.com/AnthonyN26/ansync-docprocess-emailservice-submodule
-[submodule "ansync-docprocess-latexgenerator-submodule"]
-	path = ansync-docprocess-latexgenerator-submodule
-	url = https://github.com/AnthonyN26/ansync-docprocess-latexgenerator-submodule
-[submodule "ansync-docprocess-apigateway-submodule"]
-	path = ansync-docprocess-apigateway-submodule
-	url = https://github.com/AnthonyN26/ansync-docprocess-apigateway-submodule
